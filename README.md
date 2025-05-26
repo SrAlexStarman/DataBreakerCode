@@ -2,6 +2,7 @@
 
 Welcome to the DataBreakerCode project! This repository contains the core systems, scripts, and modular architecture for a third-person action game in Unity. The project is organized into well-documented directories, each responsible for a major gameplay or system feature. This README serves as a high-level guide and entry point for understanding the structure, purpose, and interconnections of all major components.
 
+DataBreaker Itchio link: https://vfs-gdpg.itch.io/data-breaker
 ---
 
 ## Project Structure
@@ -51,24 +52,6 @@ ScriptableObjects that store all runtime parameters, references, and state for t
 - **DataContainer_Camera:** Stores all camera state, offsets, targeting, and collision logic.
 
 *See [`MainCharacter/DataContainers/README.md`](./MainCharacter/DataContainers/README.md) for a summary of fields and methods.*
-
----
-
-## How to Use This Project
-- **Modularity:** All major gameplay features are separated into their own scripts and directories. Extend or modify individual components without affecting the rest of the system.
-- **ScriptableObjects:** Actions, camera modes, and data containers leverage Unity's ScriptableObject system for easy configuration and runtime flexibility.
-- **Extensibility:** Add new actions, camera modes, or data fields by following the patterns and base classes described in each directory's README.
-- **Documentation:** Each directory contains a README with detailed script explanations, key methods, and usage notes. Refer to these for implementation details and extension guidance.
-
-## Getting Started
-1. **Explore the Directory Structure:** Begin by reading the README files in each major directory.
-2. **Review ScriptableObject Patterns:** Understand how actions, camera types, and data containers are structured for modularity.
-3. **Customize and Extend:** Use the provided base classes and patterns to add new gameplay features, camera behaviors, or player abilities.
-
-## Contribution & Maintenance
-- Keep documentation up to date as you add or modify scripts.
-- Follow the established modular and extensible patterns to ensure maintainability.
-- Use descriptive comments and summaries in your code and documentation.
 
 ---
 
