@@ -1,12 +1,15 @@
-﻿using System.Collections;
+// Copyright (C) 2025 Alejandro Lopez, All Rights Reserved 
+using System.Collections;
 using SplineMesh;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.VFX;
 
+// Handles the player's rail grinding action, including movement along splines and regaining control.
 [CreateAssetMenu(fileName = "Action_Grind", menuName = "ScriptableObjects/Actions/Action_Grind", order = 4)]
 public class Action_Grind : PlayerActions
 {
+    // Called every frame to update grinding logic and movement along the rail.
     public override void ActionEffect()
     {
         var spline = _playerData.ActionController.Spline;
@@ -24,11 +27,13 @@ public class Action_Grind : PlayerActions
 
     }
 
+    // Handles input while grinding (currently unused).
     public override void InputEffect(InputAction.CallbackContext context)
     {
         //Can we add inputs when railing?
     }
 
+    // Handles movement and logic for grinding on non-looping rails.
     void GrindNonLoop()
     {
         //Perform the grinding
@@ -59,6 +64,7 @@ public class Action_Grind : PlayerActions
         }
     }
 
+    // Handles movement and logic for grinding on looping rails.
     void GrindLoop()
     {
 
@@ -90,6 +96,7 @@ public class Action_Grind : PlayerActions
 
     }
 
+    // Performs the actual movement and animation updates for grinding along the rail.
     void Grind()
     {
         //Play the rail particles
@@ -146,6 +153,7 @@ public class Action_Grind : PlayerActions
     }
 
     //After we leave the rail get regain our controls
+    // Called when the player leaves the rail to restore normal controls and apply launch velocity.
     void RegainControls()
     {
         //Play Sound
